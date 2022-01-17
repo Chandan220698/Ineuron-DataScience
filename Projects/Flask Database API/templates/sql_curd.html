@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+    <hr>
+    <div align = "center">
+        <h3><b>Select a operation</b></h3>
+    </div>
+    <hr>
+    <form action="/sqlExecute/{{host}}/{{user}}/{{passwd}}" method="POST">
+        <table align="center">
+        <tr>
+            <td>
+            <select id='operation' name='operation'>
+                <option value="create_table">Create Table</option>
+                <option value="insert_one">Insert One</option>
+                <option value="insert_bulk">Insert Bulk</option>
+                <option value="update">Update</option>
+                <option value="delete">Delete Data</option>
+                <option value="download">Download</option>
+            </select>
+            </td>
+            <td> </td>
+            <td>
+            <input type="submit" value="Proceed">
+            </td>
+        </tr>
+        </table>
+    </form>
+    <hr>
+    <div style="padding-left: 12%;">
+        <h4>Available Databases:</h4>
+        {% for db in db_list %}
+            {{ db[0] }}
+            <br>
+        {% endfor %}
+        <hr>
+        <h6>Total Database: {{ total_db }}</h6>
+        <hr>
+    </div>
+    
+
+{% endblock content %}

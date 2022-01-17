@@ -1,0 +1,47 @@
+    {% extends "layout.html" %}
+    {% block content %}
+    <br>
+    <hr>
+    <div align = "center" style="font-weight:lighter;">
+      <p style="font-size: 35px; font-weight: bolder;"><b>Flask-Database API</b></p>
+      <b><hr></b>
+      <h3><b>Select a Database</b></h3>
+    </div>
+    
+    <div style="margin-top: 2%;">
+      <form action="/dbConnection" method="POST">
+
+        <table align="center">
+          <tr>
+            <td>
+              <select id='db' name='db'>
+                <option value="mysql">MySQL</option>
+                <option value="mongodb">mongoDB</option>
+                <option value="Cassandra">Cassandra</option>
+              </select>
+            </td>
+            <td>
+              <input type="submit" value="Proceed">
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!--
+      <main role="main" class="container">
+        <div class="row justify-content-end"> 
+            <div class="content-section">
+              <h3 color>Learn Databases</h3>
+              <p class='text-muted'>Choose the database to learn below!
+                <ul class="list-group">
+                  <li class="list-group-item list-group-item-light">
+                  <a class="nav-item nav-link" href="https://www.mysql.com/">mySQL</a></li>
+                  <li class="list-group-item list-group-item-light">Announcements</li>
+                  <li class="list-group-item list-group-item-light">Calendars</li>
+                  <li class="list-group-item list-group-item-light">etc</li>
+                </ul>
+              </p>
+            </div>
+        </div>
+      </main>-->
+    </div>
+    {% endblock content %}

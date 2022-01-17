@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Insert the Bulk Data</b></h4>
+  <h6>Upload the file</h6>
+  <form action="/insertBulk/{{host}}/{{user}}/{{passwd}}" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Database:</td><td><input type="text" name="database" id="database" size="40"></td></tr>
+      <tr><td>Table Name:</td><td><input type="text" name="table" id="table" size="40"></td></tr>
+      <tr><td>File path:</td><td><input type="text" name="path" id="path" size="40"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

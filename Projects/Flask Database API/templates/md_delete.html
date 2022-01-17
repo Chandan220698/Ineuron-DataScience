@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+<h4><b>Delete a Record</b></h4>
+<form action="/md_delete/{{clientConn}}/{{clientURL}}" method="POST">
+  <hr>
+  <br>
+  <table>
+    <tr><td>Database:</td><td><input type="text" name="database" id="database" size="34"></td></tr>
+    <tr><td>Collection:</td><td><input type="text" name="dbCollection" id="dbCollection" size="34"></td></tr>
+    <tr><td>WHERE:</td><td><input type="text" name="WHERE" id="WHERE" size="48"></td></tr>
+    <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+  </table>
+</form>
+</div>
+{% endblock content %}

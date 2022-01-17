@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Connect to MongoDB...</b></h4>
+  <form action="/mongodb_cilent" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Connection URL:</td><td><input type="text" name="client" id="cilent" placeholder="mongodb://localhost:27017/" size="35"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Insert the Data</b></h4>
+  <form action="/insertOne/{{host}}/{{user}}/{{passwd}}" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Database:</td><td><input type="text" name="database" id="database" size="35"></td></tr>
+      <tr><td>Table Name:</td><td><input type="text" name="table" id="table" size="35"></td></tr>
+      <tr><td>Insert Data:</td><td><input type="text" name="data" id="data" size="35" placeholder="csv format"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

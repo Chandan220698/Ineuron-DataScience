@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block content %}
+    <hr>
+    <div align = "center">
+        <h3><b>Select an operation</b></h3>
+    </div>
+    <hr>
+    <form action="/cassExecute/{{id}}/{{secret}}" method="POST">
+        <table align="center">
+        <tr>
+            <td>
+            <select id='operation' name='operation'>
+              <!--<option value="create_Collection">Create collection</option>--> 
+                <option value="create_table">Create Table</option>
+                <option value="insert_one">Insert One</option>
+                <option value="insert_bulk">Insert Bulk</option>
+                <option value="update">Update</option>
+                <option value="delete">Delete Data</option>
+                <!--<option value="download">Download</option>-->
+            </select>
+            </td>
+            <td> </td>
+            <td>
+            <input type="submit" value="Proceed">
+            </td>
+        </tr>
+        </table>
+    </form>
+    <hr>
+    <div style="padding-left: 12%;">
+        <h4>Available Keyspaces:</h4>
+        <h6>Choose a Keyspace (Don't select a standard Keyspace): {{ total_db }}</h6>
+        <hr>
+        <br>
+        {% for ks in keyspaceList %}
+            {{ ks }}
+            <br>
+        {% endfor %}
+        <hr>
+        <h6>Total Database: {{ total_ks }}</h6>
+        <hr>
+    </div>
+    
+
+{% endblock content %}

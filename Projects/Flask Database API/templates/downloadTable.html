@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Download Table Data</b></h4>
+  <h6>Download file in CSV format</h6>
+  <form action="/downloadTable/{{host}}/{{user}}/{{passwd}}" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Database:</td><td><input type="text" name="database" id="database" size="34"></td></tr>
+      <tr><td>Table Name:</td><td><input type="text" name="table" id="table" size="34"></td></tr>
+      <tr><td>File path:</td><td><input type="text" name="file" id="file" placeholder="Download Path with File Name" size="34"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}
