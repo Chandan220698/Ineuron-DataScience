@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+    <hr>
+    <div align = "center">
+        <h3><b>Select a operation</b></h3>
+    </div>
+    <hr>
+    <form action="/mongodb_SelectOperation/{{clientConn}}/{{clientURL}}" method="POST">
+        <table align="center">
+        <tr>
+            <td>
+            <select id='operation' name='operation'>
+              <!--<option value="create_Collection">Create collection</option>-->  
+                <option value="insert_one">Insert a Record</option>
+                <option value="insert_bulk">Insert multiple Record</option>
+                <option value="update">Update Record</option>
+                <option value="delete">Delete Record</option>
+                <option value="drop">Drop Collection</option>
+            </select>
+            </td>
+            <td> </td>
+            <td>
+            <input type="submit" value="Proceed">
+            </td>
+        </tr>
+        </table>
+    </form>
+    <hr>
+    <div style="padding-left: 12%;">
+        <h4>Available Databases:</h4>
+        {% for db in db_list %}
+            {{ db }}
+            <br>
+        {% endfor %}
+        <hr>
+        <h6>Total Database: {{ total_db }}</h6>
+        <hr>
+    </div>
+    
+
+{% endblock content %}

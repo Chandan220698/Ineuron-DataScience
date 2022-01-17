@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Insert multiple record</b></h4>
+  <form action="/md_insertMany/{{clientConn}}/{{clientURL}}" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Database:</td><td><input type="text" name="database" id="database" size="35"></td></tr>
+      <tr><td>Collection Name:</td><td><input type="text" name="dbCollection" id="dbCollection" size="35"></td></tr>
+      <tr><td>Insert record:</td><td><input type="text" name="record" id="record" size="50" placeholder="Dict format"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

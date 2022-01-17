@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+  <div align = "center">
+    <h4><b>Create a Table</b></h4>
+    <form action="/createTable/{{host}}/{{user}}/{{passwd}}" method="POST">
+      <hr>
+      <br>
+      <table>
+        <tr><td>Database:</td><td><input type="text" name="database" id="database" size="40"></td></tr>
+        <tr><td>Table Name:</td><td><input type="text" name="table" id="table" size="40"></td></tr>
+        <tr><td>Table Attributes:</td><td><input type="text" name="attr" id="attr" size="40" placeholder="without brackets ()"></td></tr>
+        <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+      </table>
+    </form>
+  </div>
+{% endblock content %}

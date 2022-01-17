@@ -1,0 +1,73 @@
+from flask import Flask, render_template, request
+import mysql.connector as connection
+
+app = Flask(__name__) ## WSGP Application 
+
+@app.route('/', methods = ['POST', 'GET'])    ## Decorator
+def homepage():
+    return render_template('homepage.html')
+
+@app.route('/dbConnection', methods = ['POST'])
+def dbSelection():
+    print(request.method)
+    if request.method == 'POST':
+        db_select = request.form['db']
+        print(db_select)
+        if db_select == 'mysql':
+            return render_template('mysql.html', title = 'MySQL')
+        elif db_select == 'mongodb':
+             return render_template('mongoDB.html', title = 'MongoDB')
+
+@app.route('/mysql')  
+def mySQL():
+    return render_template('mysql.html', title = 'MySQL')
+
+@app.route('/sqlCRUD', methods = ['POST'])
+def mysqlCOnnection():
+    try:
+        host = request.form['host']
+        user = request.form['user']
+        passwd = request.form['passwd']
+        mydb = connection.connect(host=host,user=user, passwd=passwd,use_pure=True)
+        # check if the connection is established
+        print('connection done')
+        query = "SHOW DATABASES"
+        cursor = mydb.cursor() #create a cursor to execute queries
+        cursor.execute(query)
+        db_list = cursor.fetchall()
+        print(db_list)
+
+    except Exception as e:
+        mydb.close()
+        print(str(e))
+
+    return render_template('sql_curd.html', title = 'CURD', db_list=db_list)
+
+@app.route('/sqlExecute/<host>/<user>/<passwd>', methods = ['POST'])
+def postOperation(host, user, passwd):
+    try:
+        operation = request.form['operation']
+        if operation == 'create_table':
+            return render_template('display.html', title = 'post', host=host)
+        elif operation == 'insert_one':
+            pass
+        elif operation == 'insert_bulk':
+            pass
+        elif operation == 'update':
+            pass
+        elif operation == 'delete':
+            pass
+        elif operation == 'download':
+            pass
+        
+    except Exception as e:
+        print(str(e))
+
+    return render_template('sql_curd.html', title = 'CURD')
+
+@app.route('/mongodb')  
+def mongoDB():
+    return render_template('mongoDB.html', title = 'MongoDB')
+
+if __name__ == '__main__':  
+    app.run(debug=True)

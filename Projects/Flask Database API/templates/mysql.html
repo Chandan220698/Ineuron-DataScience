@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Connect to MySQL ...</b></h4>
+  <form action="/sqlCRUD" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Host:</td><td><input type="text" name="host" id="host" placeholder="127.0.0.1"></td></tr>
+      <tr><td>User:</td><td><input type="text" name="user" id="user"></td></tr>
+      <tr><td>Password:</td><td><input type="password" name="passwd" id="passwd"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

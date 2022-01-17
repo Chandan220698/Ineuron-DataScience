@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+<div align = "center">
+  <h4><b>Connect to Cassandra Cloud ...</b></h4>
+  <form action="/cassConnection" method="POST">
+    <hr>
+    <br>
+    <table>
+      <tr><td>Client ID:</td><td><input type="text" name="clientID" id="clientID" size="42"></td></tr>
+      <tr><td>Client Secret:</td><td><input type="text" name="clientSecret" id="clientSecret" size="42"></td></tr>
+      <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+    </table>
+  </form>
+</div>
+{% endblock content %}

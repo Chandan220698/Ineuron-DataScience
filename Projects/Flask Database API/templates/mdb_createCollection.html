@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<hr>
+  <div align = "center">
+    <h4><b>Create a Collection</b></h4>
+    <form action="/mdb_createCollection/{clientConn}}" method="POST">
+      <hr>
+      <br>
+      <table>
+        <tr><td>Database:</td><td><input type="text" name="database" id="database" size="40"></td></tr>
+        <tr><td>Collection Name:</td><td><input type="text" name="collection" id="collection" size="40"></td></tr>
+        <tr><td colspan="10"><input type="submit" value="Proceed"></td></tr>
+      </table>
+    </form>
+  </div>
+{% endblock content %}
