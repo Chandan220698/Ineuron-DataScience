@@ -1,4 +1,0 @@
-1.  client ->   client = pymongo.MongoClient("mongodb://localhost:27017/")
-    connection URL
-
-2. 
