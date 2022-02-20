@@ -1,0 +1,17 @@
+2022-02-20 14:30:08 INFO-Connection Established!MongoClient(host=['cluster0-shard-00-01.a2npi.mongodb.net:27017', 'cluster0-shard-00-00.a2npi.mongodb.net:27017', 'cluster0-shard-00-02.a2npi.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-zgl784-shard-0', tls=True)
+2022-02-20 14:30:59 INFO-Connection Established!MongoClient(host=['cluster0-shard-00-01.a2npi.mongodb.net:27017', 'cluster0-shard-00-00.a2npi.mongodb.net:27017', 'cluster0-shard-00-02.a2npi.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-zgl784-shard-0', tls=True)
+2022-02-20 14:31:01 INFO-Database Created: carbon_nano_dbDatabase(MongoClient(host=['cluster0-shard-00-01.a2npi.mongodb.net:27017', 'cluster0-shard-00-00.a2npi.mongodb.net:27017', 'cluster0-shard-00-02.a2npi.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-zgl784-shard-0', tls=True), 'carbon_nano_db')
+2022-02-20 14:31:19 INFO-Collection Created: nanotube_collectionCollection(Database(MongoClient(host=['cluster0-shard-00-01.a2npi.mongodb.net:27017', 'cluster0-shard-00-00.a2npi.mongodb.net:27017', 'cluster0-shard-00-02.a2npi.mongodb.net:27017'], document_class=dict, tz_aware=False, connect=True, retrywrites=True, w='majority', authsource='admin', replicaset='atlas-zgl784-shard-0', tls=True), 'carbon_nano_db'), 'nanotube_collection')
+2022-02-20 14:32:06 INFO-Data Inserted: 10721records
+2022-02-20 14:32:12 INFO-Data Inserted: 1records
+2022-02-20 14:32:13 INFO-Data Inserted: 1records
+2022-02-20 14:32:15 INFO-Data Inserted: 1records
+2022-02-20 14:32:16 INFO-Data Inserted: 1records
+2022-02-20 14:32:26 INFO-Data Updated
+2022-02-20 14:32:30 INFO-Data Updated
+2022-02-20 14:32:35 INFO-Record Deleted
+2022-02-20 14:32:39 INFO-Record Deleted
+2022-02-20 14:32:43 INFO-Finding the records for query: {'m': '1'}
+2022-02-20 14:32:46 INFO-Finding the records for query: {'m': {'$lte': 2}}
+2022-02-20 14:32:54 INFO-Finding the records for query: {'u': {'$in': ['0,287448', '0,489336', '0,665708']}}
+2022-02-20 14:32:57 INFO-Displaying the top 10records
